@@ -5162,7 +5162,7 @@ body.modal-open,
   .modal-dialog {
     left: 50%;
     right: auto;
-    width: 700px;
+    width: 900px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
