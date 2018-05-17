@@ -929,3 +929,8 @@ p.lead{
         display: none;
     }
 }
+
+.labelOverflow {
+    width: 300px;
+    overflow-x: auto;
+}
