@@ -79,9 +79,9 @@
         <!-- Example row of columns -->
         <div class="row features">
             <div class="col-md-12 text-center">
-                <h2>Skills Used</h2>
+                <h2>Skills</h2>
                 <p>
-                    These are all of the tools and skills I learned and used, while devoleping my projects.<br />
+                    These are all of the tools and skills I have learned.<br />
                 </p>
             </div>
         </div>
@@ -122,7 +122,32 @@
                     <div class="inicon cloud"></div>
                 </div>
             </div>
-
+        </div>
+        <div class="row features">
+            <div class="col-md-3">
+                <h6 class="text-center">Java</h6>
+                <div class="hexicon">
+                    <div class="inicon java"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-center">VB.NET</h6>
+                <div class="hexicon">
+                    <div class="inicon vb"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-center">C++</h6>
+                <div class="hexicon">
+                    <div class="inicon cplus"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-center">Unity</h6>
+                <div class="hexicon">
+                    <div class="inicon unity"></div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -333,7 +358,7 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <br />
-                                                <button class="btn btn-success btn-xlg" id="btnCalc">Calculate</button>
+                                                <button class="btn btn-success buttonWidthModal" id="btnCalc">Calculate</button>
                                             </div>
                                         </div>
                                 </div>
@@ -343,12 +368,12 @@
                                     </div>
                                     <div class="col-md-3">
                                         <br />
-                                        <button type="button" class="btn btn-info" data-toggle="collapse" data-target=".multi-collapse1" aria-expanded="false" aria-controls="multiCollapse1 multiCollapseCode1" id="btnShow1">Show Code</button>
+                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse1" aria-expanded="false" aria-controls="multiCollapse1 multiCollapseCode1" id="btnShow1">Show Code</button>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse1" id="multiCollapse1">
+                                    <div class="collapse multi-collapse1 scriptborder" id="multiCollapse1">
                                         <pre class="prettyprint linenums">
 $("#btnCalc").click(function () {
     var num1 = Number($("#num1").val());
@@ -397,7 +422,7 @@ $("#btnCalc").click(function () {
                                         </div>
                                         <div class="col-md-3">
                                             <br />
-                                            <button class="btn btn-success btn-xlg" id="btnFacCalc">Calculate</button>
+                                            <button class="btn btn-success buttonWidthModal" id="btnFacCalc">Calculate</button>
                                         </div>
                                     </div>
                                 </div>
@@ -407,12 +432,12 @@ $("#btnCalc").click(function () {
                                     </div>
                                     <div class="col-md-3">
                                         <br />
-                                        <button type="button" class="btn btn-info" data-toggle="collapse" data-target=".multi-collapse2" aria-expanded="false" aria-controls="multiCollapse2 multiCollapseCode2" id="btnShow2">Show Code</button>
+                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse2" aria-expanded="false" aria-controls="multiCollapse2 multiCollapseCode2" id="btnShow2">Show Code</button>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse2" id="multiCollapseCode2">
+                                    <div class="collapse multi-collapse2 scriptborder" id="multiCollapseCode2">
                                         <pre class="prettyprint linenums">
 $("#btnFacCalc").click(function () {
     var facNum = Number($("#factorial").val());
@@ -472,7 +497,7 @@ $("#btnFacCalc").click(function () {
                                             </div>
                                             <div class="col-md-3">
                                                 <br />
-                                                <button class="btn btn-success btn-xlg" id="btnFizzBuzz">Fizz the Buzz</button>
+                                                <button class="btn btn-success buttonWidthModal" id="btnFizzBuzz">Fizz the Buzz</button>
                                             </div>
                                         </div>
                                 </div>
@@ -482,12 +507,12 @@ $("#btnFacCalc").click(function () {
                                     </div>
                                     <div class="col-md-3">
                                         <br />
-                                        <button type="button" class="btn btn-info" data-toggle="collapse" data-target=".multi-collapse3" aria-expanded="false" aria-controls="multiCollapse3 multiCollapseCode3" id="btnShow3">Show Code</button>
+                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse3" aria-expanded="false" aria-controls="multiCollapse3 multiCollapseCode3" id="btnShow3">Show Code</button>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse3" id="multiCollapseCode3">
+                                    <div class="collapse multi-collapse3 scriptborder" id="multiCollapseCode3">
                                         <pre class="prettyprint linenums">
 $("#btnFizzBuzz").click(function () {
      var num1 = Number($("#fizz").val());
@@ -527,8 +552,7 @@ $("#btnFizzBuzz").click(function () {
 		$("#fizzBuzzResult").text("Make sure there is a value and it's greater then 0");	
 	}
     }
-});
-</pre>
+});</pre>
                                     </div>
                                 </div>
                             </div>
@@ -555,7 +579,7 @@ $("#btnFizzBuzz").click(function () {
                                             </div>
                                             <div class="col-md-3">
                                                 <br />
-                                                <button class="btn btn-success btn-xlg" id="btnPal">Check</button>
+                                                <button class="btn btn-success buttonWidthModal" id="btnPal">Check</button>
                                             </div>
                                         </div>
                                 </div>
@@ -565,12 +589,12 @@ $("#btnFizzBuzz").click(function () {
                                     </div>
                                     <div class="col-md-3">
                                         <br />
-                                        <button type="button" class="btn btn-info" data-toggle="collapse" data-target=".multi-collapse4" aria-expanded="false" aria-controls="multiCollapse4 multiCollapseCode4" id="btnShow4">Show Code</button>
+                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse4" aria-expanded="false" aria-controls="multiCollapse4 multiCollapseCode4" id="btnShow4">Show Code</button>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse4" id="multiCollapse4">
+                                    <div class="collapse multi-collapse4 scriptborder" id="multiCollapse4">
                                         <pre class="prettyprint linenums">
 $("#btnPal").click(function () {
     var palSen = $("#pal").val();
@@ -651,55 +675,6 @@ $("#btnPal").click(function () {
     @Scripts.Render("~/Scripts/Factorial.js")
     @Scripts.Render("~/Scripts/FizzBuzz.js")
     @Scripts.Render("~/Scripts/PalindromeChecker.js")
-
-    <script>
-        $("#btnShow1").click(function () {
-            var check = $("#btnShow1").text();
-
-            if (check == "Show Code") {
-                $("#btnShow1").text("Hide Code");
-            }
-            else {
-                $("#btnShow1").text("Show Code");
-            }
-
-        });
-
-        $("#btnShow2").click(function () {
-            var check = $("#btnShow2").text();
-
-            if (check == "Show Code") {
-                $("#btnShow2").text("Hide Code");
-            }
-            else {
-                $("#btnShow2").text("Show Code");
-            }
-
-        });
-
-        $("#btnShow3").click(function () {
-            var check = $("#btnShow3").text();
-
-            if (check == "Show Code") {
-                $("#btnShow3").text("Hide Code");
-            }
-            else {
-                $("#btnShow3").text("Show Code");
-            }
-
-        });
-
-        $("#btnShow4").click(function () {
-            var check = $("#btnShow4").text();
-
-            if (check == "Show Code") {
-                $("#btnShow4").text("Hide Code");
-            }
-            else {
-                $("#btnShow4").text("Show Code");
-            }
-
-        });
-    </script>
+    @Scripts.Render("~/Scripts/ShowHide.js")
 }
 

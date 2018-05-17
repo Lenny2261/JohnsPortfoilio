@@ -690,6 +690,26 @@ footer *{
     background-size: 80px auto;
 }
 
+.inicon.java {
+    background: url("images/java.jpg") no-repeat center 43px;
+    background-size: 80px auto;
+}
+
+.inicon.vb {
+    background: url("images/vb.png") no-repeat center 35px;
+    background-size: 80px auto;
+}
+
+.inicon.cplus {
+    background: url("images/cplus.png") no-repeat center 35px;
+    background-size: 80px auto;
+}
+
+.inicon.unity {
+    background: url("images/unity.jpg") no-repeat center 35px;
+    background-size: 100px auto;
+}
+
 p.lead{
     font-family: 'Arvo' !important;
 }
@@ -871,4 +891,13 @@ p.lead{
     width: 300px;
     overflow-y: scroll;
     display: none;
+}
+
+.scriptborder{
+    border-style: solid;
+    border-color: black;
+}
+
+.buttonWidthModal{
+    width: 146px;
 }

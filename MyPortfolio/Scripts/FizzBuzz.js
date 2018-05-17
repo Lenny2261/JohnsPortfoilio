@@ -27,16 +27,17 @@
                     }
                 }
 				
-				document.getElementById("fizzBuzzResult").style.display = "block";
 				fizzBuzz = fizzBuzz.slice(0, -1);
                 $("#fizzBuzzResult").text(fizzBuzz);
             }
             else {
-				if(num1 <= 100 || num2 <= 100){
-					$("#fizzBuzzResult").text("Please put in a number that is 100 or below");
+				if(num1 > 100 || num2 > 100){
+					$("#fizzBuzzResult").text("Please put in a number that is between 1-100");
 				}
 				else{
-				    $("#fizzBuzzResult").text("Make sure there is a value and it's greater then 0");	
+				    $("#fizzBuzzResult").text("Make sure there is a value and it's greater then 0 and is numeric");	
 				}
             }
+
+            document.getElementById("fizzBuzzResult").style.display = "block";
         });
