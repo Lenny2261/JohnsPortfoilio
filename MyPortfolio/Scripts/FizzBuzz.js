@@ -12,21 +12,23 @@
                     buzz = index % num2;
 
                     if (fizz === 0 && buzz === 0) {
-                        fizzBuzz = fizzBuzz + " " + "FizzBuzz"
+                        fizzBuzz = fizzBuzz + " " + "FizzBuzz,"
                     }
                     else {
                         if (fizz === 0) {
-                            fizzBuzz = fizzBuzz + " " + "Fizz"
+                            fizzBuzz = fizzBuzz + " " + "Fizz,"
                         }
                         else if (buzz === 0) {
-                            fizzBuzz = fizzBuzz + " " + "Buzz"
+                            fizzBuzz = fizzBuzz + " " + "Buzz,"
                         }
                         else {
-                            fizzBuzz = fizzBuzz + " " + index
+                            fizzBuzz = fizzBuzz + " " + index + ","
                         }
                     }
                 }
-
+				
+				document.getElementById("fizzBuzzResult").style.display = "block";
+				fizzBuzz = fizzBuzz.slice(0, -1);
                 $("#fizzBuzzResult").text(fizzBuzz);
             }
             else {

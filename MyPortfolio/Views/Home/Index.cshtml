@@ -411,6 +411,7 @@ $("#btnCalc").click(function () {
                                     </div>
                                 </div>
                                 <div class="container">
+                                    <br />
                                     <div class="collapse multi-collapse2" id="multiCollapseCode2">
                                         <pre class="prettyprint linenums">
 $("#btnFacCalc").click(function () {
@@ -439,21 +440,32 @@ $("#btnFacCalc").click(function () {
                                     <br />
                                     <h5>Please enter two numbers and this will determine if they are clean multiples out of 1-100. Fizz means the first number is a clean multiple Buzz means the second and FizzBuzz means both.</h5>
                                     <br />
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="fizz">Number 1:</label>
-                                                <input type="number" placeholder="" value="" name="fizzNum" id="fizz" />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="fizz">Number 1:</label>
+                                                    <input type="number" placeholder="" value="" name="fizzNum" id="fizz" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="buzz">Number 2:</label>
+                                                    <input type="number" placeholder="" value="" name="buzzNum" id="buzz" />
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="buzz">Number 2:</label>
-                                                <input type="number" placeholder="" value="" name="buzzNum" id="buzz" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="fizzBuzzResult"></label>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label id="fizzBuzzResult" class="scrollbar"></label>
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>
                                         <div class="row">
                                             <div class="col-md-9">
 
@@ -474,6 +486,7 @@ $("#btnFacCalc").click(function () {
                                     </div>
                                 </div>
                                 <div class="container">
+                                    <br />
                                     <div class="collapse multi-collapse3" id="multiCollapseCode3">
                                         <pre class="prettyprint linenums">
 $("#btnFizzBuzz").click(function () {
@@ -556,6 +569,7 @@ $("#btnFizzBuzz").click(function () {
                                     </div>
                                 </div>
                                 <div class="container">
+                                    <br />
                                     <div class="collapse multi-collapse4" id="multiCollapse4">
                                         <pre class="prettyprint linenums">
 $("#btnPal").click(function () {
@@ -642,11 +656,47 @@ $("#btnPal").click(function () {
         $("#btnShow1").click(function () {
             var check = $("#btnShow1").text();
 
-            if (check == "Show Text") {
-                $("#btnShow1").text("Hide Text");
+            if (check == "Show Code") {
+                $("#btnShow1").text("Hide Code");
             }
             else {
-                $("#btnShow1").text("Show Text");
+                $("#btnShow1").text("Show Code");
+            }
+
+        });
+
+        $("#btnShow2").click(function () {
+            var check = $("#btnShow2").text();
+
+            if (check == "Show Code") {
+                $("#btnShow2").text("Hide Code");
+            }
+            else {
+                $("#btnShow2").text("Show Code");
+            }
+
+        });
+
+        $("#btnShow3").click(function () {
+            var check = $("#btnShow3").text();
+
+            if (check == "Show Code") {
+                $("#btnShow3").text("Hide Code");
+            }
+            else {
+                $("#btnShow3").text("Show Code");
+            }
+
+        });
+
+        $("#btnShow4").click(function () {
+            var check = $("#btnShow4").text();
+
+            if (check == "Show Code") {
+                $("#btnShow4").text("Hide Code");
+            }
+            else {
+                $("#btnShow4").text("Show Code");
             }
 
         });
