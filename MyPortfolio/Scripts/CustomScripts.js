@@ -1,4 +1,5 @@
-﻿$("#btnFacCalc").click(function () {
+﻿//Calculate factorial
+$("#btnFacCalc").click(function () {
     var facNum = Number($("#factorial").val());
     var answer = 0;
     if (facNum > 0 && $("#factorial").val() != "") {
@@ -13,7 +14,7 @@
     }
 });
 
-
+//FIZZBUZZ
 $("#btnFizzBuzz").click(function () {
     var num1 = Number($("#fizz").val());
     var num2 = Number($("#buzz").val());
@@ -64,7 +65,7 @@ $("#btnFizzBuzz").click(function () {
     document.getElementById("fizzBuzzResult").style.display = "block";
 });
 
-
+//The math calculator
 $("#btnCalc").click(function () {
     if ($("#num1").val() != "" && $("#num2").val() != "" && $("#num3").val() != "" && $("#num4").val() != "" && $("#num5").val() != "") {
         var num1 = Number($("#num1").val());
@@ -95,7 +96,7 @@ $("#btnCalc").click(function () {
     }
 });
 
-
+//Palindrome checker
 $("#btnPal").click(function () {
     var palSen = $("#pal").val();
 
@@ -109,10 +110,10 @@ $("#btnPal").click(function () {
         }
 
         if (palSen.toUpperCase() == palCheck.toUpperCase()) {
-            $("#palResult").text("This is a palindrome");
+            $("#palResult").text(palSen + " is a palindrome");
         }
         else {
-            $("#palResult").text("This is not a palindrome");
+            $("#palResult").text(palSen + " is not a palindrome");
         }
     }
     else {
@@ -121,7 +122,7 @@ $("#btnPal").click(function () {
 });
 
 
-
+//Changing the text to the Show Code button to Hide Code when pressed
 $("#btnShow1").click(function () {
     var check = $("#btnShow1").text();
 
@@ -134,6 +135,8 @@ $("#btnShow1").click(function () {
 
 });
 
+
+//Changing the text to the Show Code button to Hide Code when pressed
 $("#btnShow2").click(function () {
     var check = $("#btnShow2").text();
 
@@ -146,6 +149,7 @@ $("#btnShow2").click(function () {
 
 });
 
+//Changing the text to the Show Code button to Hide Code when pressed
 $("#btnShow3").click(function () {
     var check = $("#btnShow3").text();
 
@@ -158,6 +162,7 @@ $("#btnShow3").click(function () {
 
 });
 
+//Changing the text to the Show Code button to Hide Code when pressed
 $("#btnShow4").click(function () {
     var check = $("#btnShow4").text();
 
@@ -168,4 +173,123 @@ $("#btnShow4").click(function () {
         $("#btnShow4").text("Show Code");
     }
 
+});
+
+//Reseting the window based on what tab changed
+$(".tab-changed").click(function () {
+
+    if ($(this).attr("id") != "tab2") {
+        $("#factorial").val("");
+        $("#facResult").text("");
+    }
+
+    if ($(this).attr("id") != "tab1") {
+        $("#least").text("");
+        $("#sum").text("");
+        $("#mean").text("");
+        $("#multi").text("");
+        $("#great").text("");
+
+
+        $("#num1").val("");
+        $("#num2").val("");
+        $("#num3").val("");
+        $("#num4").val("");
+        $("#num5").val("");
+    }
+
+    if ($(this).attr("id") != "tab3") {
+        $("#fizzBuzzResult").text("");
+        $("#fizz").val("");
+        $("#buzz").val("");
+        document.getElementById("fizzBuzzResult").style.display = "none";
+    }
+
+
+    if ($(this).attr("id") != "tab4") {
+        $("#pal").val("");
+        $("#palResult").text("");
+    }
+
+
+    //Code to ensure that when the person hits the button it closes the code snippets
+    if ($(this).attr("id") == "tab1") {
+        if ($("#btnShow4").text() == "Hide Code") {
+            $("#btnShow4").text("Show Code");
+            $("#multiCollapseCode4").collapse("hide");
+            $("#multiCollapse4").collapse("show");
+        }
+
+        if ($("#btnShow3").text() == "Hide Code") {
+            $("#btnShow3").text("Show Code");
+            $("#multiCollapseCode3").collapse("hide");
+            $("#multiCollapse3").collapse("show");
+        }
+
+        if ($("#btnShow2").text() == "Hide Code") {
+            $("#btnShow2").text("Show Code");
+            $("#multiCollapseCode2").collapse("hide");
+            $("#multiCollapse2").collapse("show");
+        }
+    }
+
+    if ($(this).attr("id") == "tab2") {
+        if ($("#btnShow4").text() == "Hide Code") {
+            $("#btnShow4").text("Show Code");
+            $("#multiCollapseCode4").collapse("hide");
+            $("#multiCollapse4").collapse("show");
+        }
+
+        if ($("#btnShow3").text() == "Hide Code") {
+            $("#btnShow3").text("Show Code");
+            $("#multiCollapseCode3").collapse("hide");
+            $("#multiCollapse3").collapse("show");
+        }
+
+        if ($("#btnShow1").text() == "Hide Code") {
+            $("#btnShow1").text("Show Code");
+            $("#multiCollapseCode1").collapse("hide");
+            $("#multiCollapse1").collapse("show");
+        }
+    }
+
+    if ($(this).attr("id") == "tab3") {
+        if ($("#btnShow4").text() == "Hide Code") {
+            $("#btnShow4").text("Show Code");
+            $("#multiCollapseCode4").collapse("hide");
+            $("#multiCollapse4").collapse("show");
+        }
+
+        if ($("#btnShow2").text() == "Hide Code") {
+            $("#btnShow2").text("Show Code");
+            $("#multiCollapseCode2").collapse("hide");
+            $("#multiCollapse2").collapse("show");
+        }
+
+        if ($("#btnShow1").text() == "Hide Code") {
+            $("#btnShow1").text("Show Code");
+            $("#multiCollapseCode1").collapse("hide");
+            $("#multiCollapse1").collapse("show");
+        }
+    }
+
+    if ($(this).attr("id") == "tab4") {
+        if ($("#btnShow3").text() == "Hide Code") {
+            $("#btnShow3").text("Show Code");
+            $("#multiCollapseCode3").collapse("hide");
+            $("#multiCollapse3").collapse("show");
+        }
+
+        if ($("#btnShow2").text() == "Hide Code") {
+            $("#btnShow2").text("Show Code");
+            $("#multiCollapseCode2").collapse("hide");
+            $("#multiCollapse2").collapse("show");
+        }
+
+        if ($("#btnShow1").text() == "Hide Code") {
+            $("#btnShow1").text("Show Code");
+            $("#multiCollapseCode1").collapse("hide");
+            $("#multiCollapse1").collapse("show");
+        }
+    }
 });

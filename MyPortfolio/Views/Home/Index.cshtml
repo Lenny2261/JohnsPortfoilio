@@ -178,6 +178,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center inner-page">
+                <br />
+                <br />
                 <h2>My Projects</h2>
                 <p>
                     These are my projects that I have been working on, while learning at Coder Foundry.
@@ -293,17 +295,17 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="modal-body" style="background-color: white; color: black;">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#js1">Exercise 1</a></li>
-                        <li><a data-toggle="tab" href="#js2">Exercise 2</a></li>
-                        <li><a data-toggle="tab" href="#js3">Exercise 3</a></li>
-                        <li><a data-toggle="tab" href="#js4">Exercise 4</a></li>
+                        <li class="active"><a data-toggle="tab" href="#js1" class="tab-changed" id="tab1">Exercise 1</a></li>
+                        <li><a data-toggle="tab" href="#js2" class="tab-changed" id="tab2">Exercise 2</a></li>
+                        <li><a data-toggle="tab" href="#js3" class="tab-changed" id="tab3">Exercise 3</a></li>
+                        <li><a data-toggle="tab" href="#js4" class="tab-changed" id="tab4">Exercise 4</a></li>
                     </ul>
 
                     <div class="tab-content">
                         <div id="js1" class="tab-pane fade in active">
                             <div class="container">
                                 <div class="collapse multi-collapse1 in" id="multiCollapse1">
-                                    <h3>JavaScript Exercise 1</h3>
+                                    <h3>Math Functions:</h3>
                                     <br />
                                     <h5>Put in 5 numbers and this will return the least of these numbers, the greatest of them, the average, the sum, and  the product.</h5>
                                     <br />
@@ -373,7 +375,7 @@
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse1 scriptborder" id="multiCollapse1">
+                                    <div class="collapse multi-collapse1 scriptborder" id="multiCollapseCode1">
                                         <pre class="prettyprint linenums">
 $("#btnCalc").click(function () {
     if ($("#num1").val() != "" && $("#num2").val() != "" && $("#num3").val() != "" && $("#num4").val() != "" && $("#num5").val() != "") {
@@ -409,10 +411,10 @@ $("#btnCalc").click(function () {
                                 </div>
                             </div>
                         </div>
-                        <div id="js2" class="tab-pane fade in">
+                        <div id="js2" class="tab-pane fade in tabChanged">
                             <div class="container">
                                 <div class="collapse multi-collapse2 in" id="multiCollapse2">
-                                    <h3>JavaScript Exercise 2</h3>
+                                    <h3>Factorial Calculator:</h3>
                                     <br />
                                     <h5>Put in a number and it will return a factorial of this number. (A factorial is a number multipliyed by it's lower numbers I.e. 3 is ((3 * 2) * 1))</h5>
                                     <br />
@@ -467,10 +469,10 @@ $("#btnFacCalc").click(function () {
                                 </div>
                             </div>
                         </div>
-                        <div id="js3" class="tab-pane fade in">
+                        <div id="js3" class="tab-pane fade in tabChanged">
                             <div class="container">
                                 <div class="collapse multi-collapse3 in" id="multiCollapse3">
-                                    <h3>JavaScript Exercise 3</h3>
+                                    <h3>FIZZBUZZ:</h3>
                                     <br />
                                     <h5>Please enter two numbers and this will determine if they are clean multiples out of 1-100. Fizz means the first number is a clean multiple Buzz means the second and FizzBuzz means both.</h5>
                                     <br />
@@ -576,10 +578,10 @@ $("#btnFizzBuzz").click(function () {
                                 </div>
                             </div>
                         </div>
-                        <div id="js4" class="tab-pane fade in">
+                        <div id="js4" class="tab-pane fade in tabChanged">
                             <div class="container">
                                 <div class="collapse multi-collapse4 in" id="multiCollapse4">
-                                    <h3>JavaScript Exercise 4</h3>
+                                    <h3>Palindrome Checker:</h3>
                                     <br />
                                     <h5>Please enter a sentence and this will tell you if it is a palindrome. (A word backwards being the same word)</h5>
                                     <br />
@@ -613,7 +615,7 @@ $("#btnFizzBuzz").click(function () {
                                 </div>
                                 <div class="container">
                                     <br />
-                                    <div class="collapse multi-collapse4 scriptborder" id="multiCollapse4">
+                                    <div class="collapse multi-collapse4 scriptborder" id="multiCollapseCode4">
                                         <pre class="prettyprint linenums">
 $("#btnPal").click(function () {
     var palSen = $("#pal").val();
@@ -628,10 +630,10 @@ $("#btnPal").click(function () {
         }
 
         if (palSen.toUpperCase() == palCheck.toUpperCase()) {
-            $("#palResult").text("This is a palindrome");
+            $("#palResult").text(palSen + " is a palindrome");
         }
         else {
-            $("#palResult").text("This is not a palindrome");
+            $("#palResult").text(palSen + " is not a palindrome");
         }
     }
     else {
