@@ -619,6 +619,7 @@
     <Content Include="css\icons\fonts\linecons.ttf" />
     <Content Include="css\icons\fonts\linecons.woff" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\CustomScripts.js" />
     <Content Include="Scripts\Factorial.js" />
     <Content Include="Scripts\FizzBuzz.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

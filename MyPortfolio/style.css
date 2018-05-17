@@ -560,7 +560,7 @@ footer div.footer-ribbon:before {
     width: 7px;
 }
 footer div.container div.row > div {
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
 }
 
 footer div.footer-ribbon {
@@ -581,7 +581,7 @@ footer {
     background: #121214;
     border-top: 4px solid #1F1F1F;
     font-size: 0.9em;
-    padding: 80px 0 0;
+    padding: 0px 0 0;
     position: relative;
 }
 
@@ -900,4 +900,19 @@ p.lead{
 
 .buttonWidthModal{
     width: 146px;
+}
+
+.fizzBuzz{
+    color: purple;
+    font: bold;
+}
+
+.fizz {
+    color: blue;
+    font: bold;
+}
+
+.buzz {
+    color: red;
+    font: bold;
 }
