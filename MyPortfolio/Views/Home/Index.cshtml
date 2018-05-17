@@ -6,16 +6,14 @@
 <link href="~/css/animate.min.css" rel="stylesheet">
 <link href="~/css/icons/icons.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-
 <link href="~/style.css" rel="stylesheet">
-
 <link href="~/Content/Desert.css" rel="stylesheet" />
 <link href="~/Content/shThemeDefault.css" rel="stylesheet" />
 
 
 <div class="jumbotron" id="home">
     <div class="intro">
-        <div class="container">
+        <div class="container text-center">
             <div class="row">
                 <h1 class="text-center">John Mahoney</h1>
                 <p class="text-center">Who You Want On Your Team</p><br />
@@ -24,12 +22,12 @@
                 <div class="up-triangle animated fadeInUp">
                     <div class="info">
                         <i class="icon icon-cogs"></i><br />
-                        Bootstrap 3
+                        Hard Working
                     </div>
                 </div>
                 <div class="down-triangle animated fadeInDown">
                     <div class="info">
-                        Support<br />
+                        Dedicated<br />
                         <i class="icon icon-envelope-alt"></i>
                     </div>
                 </div>
@@ -59,14 +57,14 @@
                 </div>
                 <div class="down-triangle animated fadeInDown">
                     <div class="info">
-                        Secure<br />
+                       Problem Solver<br />
                         <i class="icon icon-laptop"></i>
                     </div>
                 </div>
                 <div class="up-triangle animated fadeInUp">
                     <div class="info">
                         <i class="icon icon-comments-alt"></i><br />
-                        Helpful
+                        Team Player
                     </div>
                 </div>
 
@@ -292,7 +290,6 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="modal-body" style="background-color: white; color: black;">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#js1" class="tab-changed" id="tab1">Exercise 1</a></li>
@@ -300,7 +297,7 @@
                         <li><a data-toggle="tab" href="#js3" class="tab-changed" id="tab3">Exercise 3</a></li>
                         <li><a data-toggle="tab" href="#js4" class="tab-changed" id="tab4">Exercise 4</a></li>
                     </ul>
-
+                    <button type="button" class="close" data-dismiss="modal" id="modalClose">&times;</button>
                     <div class="tab-content">
                         <div id="js1" class="tab-pane fade in active">
                             <div class="container">
@@ -309,60 +306,60 @@
                                     <br />
                                     <h5>Put in 5 numbers and this will return the least of these numbers, the greatest of them, the average, the sum, and  the product.</h5>
                                     <br />
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="num1">Number 1:</label>
-                                                <input type="number" placeholder="" value="" name="Num 1" id="num1" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="least"></label>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="num1">Number 1:</label>
+                                            <input type="number" placeholder="" value="" name="Num 1" id="num1" />
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="num2">Number 2:</label>
-                                                <input type="number" placeholder="" value="" name="Num 2" id="num2" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="great"></label>
-                                            </div>
+                                        <div class="col-md-6">
+                                            <label id="least"></label>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="num3">Number 3:</label>
-                                                <input type="number" placeholder="" value="" name="Num 3" id="num3" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="mean"></label>
-                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="num2">Number 2:</label>
+                                            <input type="number" placeholder="" value="" name="Num 2" id="num2" />
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="num3">Number 4:</label>
-                                                <input type="number" placeholder="" value="" name="Num 4" id="num4" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="sum"></label>
-                                            </div>
+                                        <div class="col-md-6">
+                                            <label id="great"></label>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="num3">Number 5:</label>
-                                                <input type="number" placeholder="" value="" name="Num 5" id="num5" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="multi"></label>
-                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="num3">Number 3:</label>
+                                            <input type="number" placeholder="" value="" name="Num 3" id="num3" />
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-9">
+                                        <div class="col-md-6">
+                                            <label id="mean"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="num3">Number 4:</label>
+                                            <input type="number" placeholder="" value="" name="Num 4" id="num4" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="sum"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="num3">Number 5:</label>
+                                            <input type="number" placeholder="" value="" name="Num 5" id="num5" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="multi"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9">
 
-                                            </div>
-                                            <div class="col-md-3">
-                                                <br />
-                                                <button class="btn btn-success buttonWidthModal" id="btnCalc">Calculate</button>
-                                            </div>
                                         </div>
+                                        <div class="col-md-3">
+                                            <br />
+                                            <button class="btn btn-success buttonWidthModal" id="btnCalc">Calculate</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-9">
@@ -502,15 +499,15 @@ $("#btnFacCalc").click(function () {
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="row">
-                                            <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-9">
 
-                                            </div>
-                                            <div class="col-md-3">
-                                                <br />
-                                                <button class="btn btn-success buttonWidthModal" id="btnFizzBuzz">Fizz the Buzz</button>
-                                            </div>
                                         </div>
+                                        <div class="col-md-3">
+                                            <br />
+                                            <button class="btn btn-success buttonWidthModal" id="btnFizzBuzz">Fizz the Buzz</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-9">
@@ -583,26 +580,26 @@ $("#btnFizzBuzz").click(function () {
                                 <div class="collapse multi-collapse4 in" id="multiCollapse4">
                                     <h3>Palindrome Checker:</h3>
                                     <br />
-                                    <h5>Please enter a sentence and this will tell you if it is a palindrome. (A word backwards being the same word)</h5>
+                                    <h5>Please enter a sentence and this will tell you if it is a palindrome. (A word backwards being the same word) Special characters such as !#$% etc. are taken out.</h5>
                                     <br />
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="pal">Enter the Sentence to Check:</label>
-                                                <input type="text" placeholder="" value="" name="palCheck" id="pal" />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label id="palResult"></label>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="pal">Enter the Sentence to Check:</label>
+                                            <input type="text" placeholder="" value="" name="palCheck" id="pal" />
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-9">
+                                        <div class="col-md-6">
+                                            <label id="palResult"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9">
 
-                                            </div>
-                                            <div class="col-md-3">
-                                                <br />
-                                                <button class="btn btn-success buttonWidthModal" id="btnPal">Check</button>
-                                            </div>
                                         </div>
+                                        <div class="col-md-3">
+                                            <br />
+                                            <button class="btn btn-success buttonWidthModal" id="btnPal">Check</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-9">

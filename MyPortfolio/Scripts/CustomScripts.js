@@ -293,3 +293,55 @@ $(".tab-changed").click(function () {
         }
     }
 });
+
+//Resetting a modal on close
+$("#scriptModal").on("hidden.bs.modal", function () {
+
+    if ($("#btnShow4").text() == "Hide Code") {
+        $("#btnShow4").text("Show Code");
+        $("#multiCollapseCode4").collapse("hide");
+        $("#multiCollapse4").collapse("show");
+    }
+
+    if ($("#btnShow3").text() == "Hide Code") {
+        $("#btnShow3").text("Show Code");
+        $("#multiCollapseCode3").collapse("hide");
+        $("#multiCollapse3").collapse("show");
+    }
+
+    if ($("#btnShow2").text() == "Hide Code") {
+        $("#btnShow2").text("Show Code");
+        $("#multiCollapseCode2").collapse("hide");
+        $("#multiCollapse2").collapse("show");
+    }
+
+    if ($("#btnShow1").text() == "Hide Code") {
+        $("#btnShow1").text("Show Code");
+        $("#multiCollapseCode1").collapse("hide");
+        $("#multiCollapse1").collapse("show");
+    }
+
+    $("#pal").val("");
+    $("#palResult").text("");
+
+    $("#fizzBuzzResult").text("");
+    $("#fizz").val("");
+    $("#buzz").val("");
+    document.getElementById("fizzBuzzResult").style.display = "none";
+
+    $("#factorial").val("");
+    $("#facResult").text("");
+
+    $("#least").text("");
+    $("#sum").text("");
+    $("#mean").text("");
+    $("#multi").text("");
+    $("#great").text("");
+
+
+    $("#num1").val("");
+    $("#num2").val("");
+    $("#num3").val("");
+    $("#num4").val("");
+    $("#num5").val("");
+});

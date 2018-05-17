@@ -919,3 +919,7 @@ p.lead{
     color: red;
     font: bold;
 }
+
+#modalClose{
+    padding-right: 5px;
+}
