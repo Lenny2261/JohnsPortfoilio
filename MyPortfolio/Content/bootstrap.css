@@ -2142,14 +2142,15 @@ input[type="button"].btn-block {
 }
 
 .glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons-Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons-Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 26px;
 }
 .glyphicon-asterisk:before {
   content: "\2a";

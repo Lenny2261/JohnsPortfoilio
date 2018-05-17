@@ -923,3 +923,9 @@ p.lead{
 #modalClose{
     padding-right: 5px;
 }
+
+@media (max-width: 1200px) {
+    .mobileTriangle{
+        display: none;
+    }
+}
