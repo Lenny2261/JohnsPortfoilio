@@ -209,6 +209,18 @@ $("#btnShow4").click(function () {
 
 });
 
+$("#btnShow5").click(function () {
+    var check = $("#btnShow4").text();
+
+    if (check == "Show Code") {
+        $("#btnShow5").text("Hide Code");
+    }
+    else {
+        $("#btnShow5").text("Show Code");
+    }
+
+});
+
 //Reseting the window based on what tab changed
 $(".tab-changed").click(function () {
 
@@ -245,6 +257,14 @@ $(".tab-changed").click(function () {
         $("#palResult").text("");
     }
 
+    if ($(this).attr("id") != "tab5") {
+        document.getElementById("slotImage1").src = "/images/cherry.png";
+        document.getElementById("slotImage2").src = "/images/cherry.png";
+        document.getElementById("slotImage3").src = "/images/cherry.png";
+        $("#bankAccount").text("$500");
+        $("#bettingAmount").val("")
+        $("#winningMessage").text("");
+    }
 
     //Code to ensure that when the person hits the button it closes the code snippets
     if ($(this).attr("id") == "tab1") {
@@ -264,6 +284,12 @@ $(".tab-changed").click(function () {
             $("#btnShow2").text("Show Code");
             $("#multiCollapseCode2").collapse("hide");
             $("#multiCollapse2").collapse("show");
+        }
+
+        if ($("#btnShow5").text() == "Hide Code") {
+            $("#btnShow5").text("Show Code");
+            $("#multiCollapseCode5").collapse("hide");
+            $("#multiCollapse5").collapse("show");
         }
     }
 
@@ -285,6 +311,12 @@ $(".tab-changed").click(function () {
             $("#multiCollapseCode1").collapse("hide");
             $("#multiCollapse1").collapse("show");
         }
+
+        if ($("#btnShow5").text() == "Hide Code") {
+            $("#btnShow5").text("Show Code");
+            $("#multiCollapseCode5").collapse("hide");
+            $("#multiCollapse5").collapse("show");
+        }
     }
 
     if ($(this).attr("id") == "tab3") {
@@ -305,9 +337,47 @@ $(".tab-changed").click(function () {
             $("#multiCollapseCode1").collapse("hide");
             $("#multiCollapse1").collapse("show");
         }
+
+        if ($("#btnShow5").text() == "Hide Code") {
+            $("#btnShow5").text("Show Code");
+            $("#multiCollapseCode5").collapse("hide");
+            $("#multiCollapse5").collapse("show");
+        }
     }
 
     if ($(this).attr("id") == "tab4") {
+        if ($("#btnShow3").text() == "Hide Code") {
+            $("#btnShow3").text("Show Code");
+            $("#multiCollapseCode3").collapse("hide");
+            $("#multiCollapse3").collapse("show");
+        }
+
+        if ($("#btnShow2").text() == "Hide Code") {
+            $("#btnShow2").text("Show Code");
+            $("#multiCollapseCode2").collapse("hide");
+            $("#multiCollapse2").collapse("show");
+        }
+
+        if ($("#btnShow1").text() == "Hide Code") {
+            $("#btnShow1").text("Show Code");
+            $("#multiCollapseCode1").collapse("hide");
+            $("#multiCollapse1").collapse("show");
+        }
+
+        if ($("#btnShow5").text() == "Hide Code") {
+            $("#btnShow5").text("Show Code");
+            $("#multiCollapseCode5").collapse("hide");
+            $("#multiCollapse5").collapse("show");
+        }
+    }
+
+    if ($(this).attr("id") == "tab5") {
+        if ($("#btnShow4").text() == "Hide Code") {
+            $("#btnShow4").text("Show Code");
+            $("#multiCollapseCode4").collapse("hide");
+            $("#multiCollapse4").collapse("show");
+        }
+
         if ($("#btnShow3").text() == "Hide Code") {
             $("#btnShow3").text("Show Code");
             $("#multiCollapseCode3").collapse("hide");
@@ -330,6 +400,12 @@ $(".tab-changed").click(function () {
 
 //Resetting a modal on close
 $("#scriptModal").on("hidden.bs.modal", function () {
+
+    if ($("#btnShow5").text() == "Hide Code") {
+        $("#btnShow5").text("Show Code");
+        $("#multiCollapseCode5").collapse("hide");
+        $("#multiCollapse5").collapse("show");
+    }
 
     if ($("#btnShow4").text() == "Hide Code") {
         $("#btnShow4").text("Show Code");
@@ -378,6 +454,13 @@ $("#scriptModal").on("hidden.bs.modal", function () {
     $("#num3").val("");
     $("#num4").val("");
     $("#num5").val("");
+
+    document.getElementById("slotImage1").src = "/images/cherry.png";
+    document.getElementById("slotImage2").src = "/images/cherry.png";
+    document.getElementById("slotImage3").src = "/images/cherry.png";
+    $("#bankAccount").text("$500");
+    $("#bettingAmount").val("")
+    $("#winningMessage").text("");
 
     $("#tab1").tab("show");
 });
@@ -441,32 +524,63 @@ $("#btnCrazyMode").click(function () {
     document.getElementById("fizzBuzzResult").style.display = "block";
 });
 
-function changePic1(machineArr) {
-    var index = Math.floor(Math.random() * 7);
-    document.getElementById("slotImage1").src = machineArr[index];
-}
+$("#btnStartMachine").click(function () {
+    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/apple.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
+    var account = $("#bankAccount").text();
+    var betting = Number($("#bettingAmount").val());
+    account = Number(account.substring(1, account.length));
+    if ($("#bettingAmount").val() != "" && account > 0) {
+        var pic1 = Math.floor(Math.random() * 8)
+        var pic2 = Math.floor(Math.random() * 8)
+        var pic3 = Math.floor(Math.random() * 8)
 
-$(".slotMachine").click(function () {
-    var machineArr = ["~/images/apple.png", "~/images/bar.png", "~/images/diamond.png", "~/images/grapes.png", "~/images/lemon.png", "~/images/orange.png", "~/images/Lucky7.png", "~/images/cherry.png"];
-    var active;
+        document.getElementById("slotImage1").src = machineArr[pic1];
+        document.getElementById("slotImage2").src = machineArr[pic2];
+        document.getElementById("slotImage3").src = machineArr[pic3];
 
-    if ($(this).attr("id") == "btnStartMachine") {
-        active = 3;
+        if (pic1 == 0 && pic2 == 0 && pic3 == 0 || pic1 == 1 && pic2 == 1 && pic3 == 1) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 1.5x what you have bet");
+            betting = betting * 1.5;
+            account = account + betting;
+        }
+        else if (pic1 == 2 && pic == 2 && pic3 == 2) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 10x what you have bet");
+            betting = betting * 10;
+            account = account + betting;
+        }
+        else if (pic1 == 3 && pic == 3 && pic3 == 3 || pic1 == 4 && pic2 == 4 && pic3 == 4) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 3x what you have bet");
+            betting = betting * 3;
+            account = account + betting;
+        }
+        else if (pic1 == 5 && pic2 == 5 && pic3 == 5) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 5x what you have bet");
+            betting = betting * 5;
+            account = account + betting;
+        }
+        else if (pic1 == 6 && pic2 == 6 && pic3 == 6) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 15x what you have bet");
+            betting = betting * 15;
+            account = account + betting;
+        }
+        else if (pic1 == 7 && pic2 == 7 && pic3 == 7) {
+            $("#winningMessage").text("You have lost. Lemons took all your money");
+            account = 0;
+            betting = 0;
+        }
+        else {
+            $("#winningMessage").text("You have lost.");
+            account = account - betting;
+        }
 
-        pic1 = setInterval(changePic1(machineArr), 100);
-
-        //while (active >= 3) {
-
-        //}
-
-        //while (active >= 2) {
-
-        //}
+        $("#bankAccount").text("$" + account);
     }
-    else if ($(this).attr("id") == "btnStopMachine") {
-        if (active == 3) {
-            clearInterval(pic1);
+    else {
+        if (account <= 0) {
+            $("#winningMessage").text("Come back when you get some money buddy. (leave then come back)");
+        }
+        else {
+            $("#winningMessage").text("Enter a betting amount");
         }
     }
-
 })

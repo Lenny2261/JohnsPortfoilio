@@ -718,19 +718,13 @@ $("#btnPal").click(function () {
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-9">
+                                            <br/>
+                                            <label id="winningMessage"></label>
                                         </div>
                                         <div class="col-md-3">
-                                            <br />
                                             <br />
                                             <button type="button" class="btn btn-success buttonWidthModal slotMachine" id="btnStartMachine">Start</button>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <br />
-                                            <br />
-                                            <button type="button" class="btn btn-success buttonWidthModal slotMachine" id="btnStopMachine">Stop</button>
-                                        </div>
-                                        <div class="col-md-3">
                                         </div>
                                     </div>
                                 </div>
@@ -746,6 +740,68 @@ $("#btnPal").click(function () {
                                 <div class="container">
                                     <br />
                                     <div class="collapse multi-collapse5 scriptborder" id="multiCollapseCode5">
+                                        <pre class="prettyprint linenums">
+$("#btnStartMachine").click(function () {
+    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/apple.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
+    var account = $("#bankAccount").text();
+    var betting = Number($("#bettingAmount").val());
+    account = Number(account.substring(1, account.length));
+    if ($("#bettingAmount").val() != "" && account > 0) {
+        var pic1 = Math.floor(Math.random() * 8)
+        var pic2 = Math.floor(Math.random() * 8)
+        var pic3 = Math.floor(Math.random() * 8)
+
+        document.getElementById("slotImage1").src = machineArr[pic1];
+        document.getElementById("slotImage2").src = machineArr[pic2];
+        document.getElementById("slotImage3").src = machineArr[pic3];
+
+        if (pic1 == 0 && pic2 == 0 && pic3 == 0 || pic1 == 1 && pic2 == 1 && pic3 == 1) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 1.5x what you have bet");
+            betting = betting * 1.5;
+            account = account + betting;
+        }
+        else if (pic1 == 2 && pic == 2 && pic3 == 2) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 10x what you have bet");
+            betting = betting * 10;
+            account = account + betting;
+        }
+        else if (pic1 == 3 && pic == 3 && pic3 == 3 || pic1 == 4 && pic2 == 4 && pic3 == 4) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 3x what you have bet");
+            betting = betting * 3;
+            account = account + betting;
+        }
+        else if (pic1 == 5 && pic2 == 5 && pic3 == 5) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 5x what you have bet");
+            betting = betting * 5;
+            account = account + betting;
+        }
+        else if (pic1 == 6 && pic2 == 6 && pic3 == 6) {
+            $("#winningMessage").text("YOU HAVE WON! Your earnings is 15x what you have bet");
+            betting = betting * 15;
+            account = account + betting;
+        }
+        else if (pic1 == 7 && pic2 == 7 && pic3 == 7) {
+            $("#winningMessage").text("You have lost. Lemons took all your money");
+            account = 0;
+            betting = 0;
+        }
+        else {
+            $("#winningMessage").text("You have lost.");
+            account = account - betting;
+        }
+
+        $("#bankAccount").text("$" + account);
+    }
+    else {
+        if (account <= 0) {
+            $("#winningMessage").text("Come back when you get some money buddy. (leave then come back)");
+        }
+        else {
+            $("#winningMessage").text("Enter a betting amount");
+        }
+    }
+})
+</pre>
                                     </div>
                                 </div>
                             </div>
