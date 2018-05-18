@@ -440,3 +440,33 @@ $("#btnCrazyMode").click(function () {
     //make block visible
     document.getElementById("fizzBuzzResult").style.display = "block";
 });
+
+function changePic1(machineArr) {
+    var index = Math.floor(Math.random() * 7);
+    document.getElementById("slotImage1").src = machineArr[index];
+}
+
+$(".slotMachine").click(function () {
+    var machineArr = ["~/images/apple.png", "~/images/bar.png", "~/images/diamond.png", "~/images/grapes.png", "~/images/lemon.png", "~/images/orange.png", "~/images/Lucky7.png", "~/images/cherry.png"];
+    var active;
+
+    if ($(this).attr("id") == "btnStartMachine") {
+        active = 3;
+
+        pic1 = setInterval(changePic1(machineArr), 100);
+
+        //while (active >= 3) {
+
+        //}
+
+        //while (active >= 2) {
+
+        //}
+    }
+    else if ($(this).attr("id") == "btnStopMachine") {
+        if (active == 3) {
+            clearInterval(pic1);
+        }
+    }
+
+})

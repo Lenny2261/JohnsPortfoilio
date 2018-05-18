@@ -168,3 +168,13 @@
     width: 700px;
     height: 700px;
 }
+
+@media screen and (min-width: 768px) {
+    .modal-dialog{
+        width: 800px !important;
+    }
+}
+
+.glyphicon {
+    font-size: 25px;
+}
