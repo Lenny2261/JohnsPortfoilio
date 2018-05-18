@@ -1,0 +1,165 @@
+﻿
+.scrollbar {
+    height: 100px;
+    width: 300px;
+    overflow-y: scroll;
+    display: none;
+}
+
+.scriptborder {
+    border-style: solid;
+    border-color: black;
+}
+
+.buttonWidthModal {
+    width: 146px;
+}
+
+.fizzBuzz {
+    color: purple;
+    font: bold;
+}
+
+.fizz {
+    color: blue;
+    font: bold;
+}
+
+.buzz {
+    color: red;
+    font: bold;
+}
+
+#modalClose {
+    padding-right: 5px;
+}
+
+@media (max-width: 1200px) {
+    .mobileTriangle {
+        display: none;
+    }
+}
+
+.labelOverflow {
+    width: 300px;
+    overflow-x: auto;
+}
+
+@media (max-width: 415px) {
+    .labelOverflow {
+        width: 250px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 250px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 412px) {
+    .labelOverflow {
+        width: 200px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 200px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 376px) {
+    .labelOverflow {
+        width: 175px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 175px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 361px) {
+    .labelOverflow {
+        width: 150px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 150px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 321px) {
+    .labelOverflow {
+        width: 125px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 125px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+.numFBR1 {
+    color: aquamarine;
+    font: bold;
+}
+
+.numFBR2 {
+    color: chartreuse;
+    font: bold;
+}
+
+.numFBR3 {
+    color: thistle;
+    font: bold;
+}
+
+.numFBR4 {
+    color: cadetblue;
+    font: bold;
+}
+
+.numFBR5 {
+    color: yellowgreen;
+    font: bold;
+}
+
+.numFBR6 {
+    color: mediumvioletred;
+    font: bold;
+}
+
+.numFBR7 {
+    color: fuchsia;
+    font: bold;
+}
+
+.numFBR8 {
+    color: gainsboro;
+    font: bold;
+}
+
+.crazyModeButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    box-shadow: none !important;
+}

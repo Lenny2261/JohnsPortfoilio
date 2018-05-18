@@ -381,3 +381,62 @@ $("#scriptModal").on("hidden.bs.modal", function () {
 
     $("#tab1").tab("show");
 });
+
+
+//CRAZY MODE
+$("#btnCrazyMode").click(function () {
+    //get input
+    var num1 = Number($("#fizz").val());
+    var num2 = Number($("#buzz").val());
+    var fizz = 0;
+    var buzz = 0;
+    var fizzBuzz = "";
+    var randVar
+
+    //validate
+    if ($("#fizz").val() != "" && $("#buzz").val() != "" && num1 > 0 && num2 > 0 && num1 <= 100 && num2 <= 100) {
+        //loop 100 time to check for clean multiples
+        for (var index = 1; index <= 100; index++) {
+            fizz = index % num1;
+            buzz = index % num2;
+
+            //if both are fizzbuzz
+            if (fizz === 0 && buzz === 0) {
+                fizzBuzz = fizzBuzz + " " + "<span class='fizzBuzz'>FizzBuzz,</span>"
+            }
+            else {
+                if (fizz === 0) {
+                    //if first fizz
+                    fizzBuzz = fizzBuzz + " " + "<span class='fizz'>Fizz,</span>"
+                }
+                else if (buzz === 0) {
+                    //if second buzz
+                    fizzBuzz = fizzBuzz + " " + "<span class='buzz'>Buzz,</span>"
+                }
+                else {
+                    //if none display the number
+                    randVar = Math.floor(Math.random() * 8)
+                    randVar = randVar + 1;
+                    fizzBuzz = fizzBuzz + " " + "<span class='numFBR" + randVar + "'>" + index + "," + "</span>"
+                }
+            }
+        }
+
+        fizzBuzz = fizzBuzz.substring(0, fizzBuzz.length - 8);
+
+        $("#fizzBuzzResult").html(fizzBuzz);
+    }
+    else {
+        if (num1 > 100 || num2 > 100) {
+            //message if wrong and number is more than 100
+            $("#fizzBuzzResult").text("Please put in a number that is between 1-100");
+        }
+        else {
+            //message if wrong and has not value is negative or not numeric
+            $("#fizzBuzzResult").text("Make sure there is a value and it's greater then 0 and is numeric");
+        }
+    }
+
+    //make block visible
+    document.getElementById("fizzBuzzResult").style.display = "block";
+});
