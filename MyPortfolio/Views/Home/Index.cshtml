@@ -158,7 +158,7 @@
         </div>
         <div class="row inner-page">
             <div class="col-md-4">
-                <img class="img-rounded" src="~/images/port.png" alt="John Mahoney" />
+                <img class="img-rounded" src="~/images/port.jpg" alt="John Mahoney" />
             </div>
             <div class="col-md-8">
                 <p class="text-left">
@@ -296,7 +296,7 @@
                         <li><a data-toggle="tab" href="#js2" class="tab-changed" id="tab2">Exercise 2</a></li>
                         <li><a data-toggle="tab" href="#js3" class="tab-changed" id="tab3">Exercise 3</a></li>
                         <li><a data-toggle="tab" href="#js4" class="tab-changed" id="tab4">Exercise 4</a></li>
-                        <li><a data-toggle="tab" href="#js5" class="tab-changed" id="tab5">Custom Exercise</a></li>
+                        <li><a data-toggle="tab" href="#js5" class="tab-changed" id="tab5">Custom Exercise 1</a></li>
                     </ul>
                     <button type="button" class="close" data-dismiss="modal" id="modalClose">&times;</button>
                     <div class="tab-content">
@@ -680,26 +680,57 @@ $("#btnPal").click(function () {
                         <div id="js5" class="tab-pane fade in tabChanged">
                             <div class="container">
                                 <div class="collapse multi-collapse5 in" id="multiCollapse5">
-                                    <h3>Palindrome Checker:</h3>
+                                    <h3>Slot Machine:</h3>
                                     <br />
-                                    <h5>Please enter a sentence and this will tell you if it is a palindrome. (A word backwards being the same word) Special characters such as !#$% etc. are taken out.</h5>
+                                    <h5>This is a slot machine enter in the amount you want to best and test your luck.</h5>
                                     <br />
                                     <div class="row">
-                                        <div class="col-md-7">
-                                            <label for="pal">Enter the Sentence to Check:</label>
-                                            <input type="text" placeholder="" value="" name="palCheck" id="pal" />
+                                        <div class="col-md-4">
+                                            <label>Amount left:</label>
+                                            <label id="bankAccount">$500</label>
                                         </div>
-                                        <div class="col-md-5">
-                                            <label id="palResult" class="labelOverflow"></label>
+                                        <div class="col-md-2">
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Betting Amount:</label>
+                                            <input type="number" id="bettingAmount" />
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-md-4 text-center">
+                                                <br />
+                                                <img src="~/images/cherry.png" />
+                                                <br />
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <br />
+                                                <img src="~/images/cherry.png" />
+                                                <br />
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <br />
+                                                <img src="~/images/cherry.png" />
+                                                <br />
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-9">
-
+                                        <div class="col-md-3">
                                         </div>
                                         <div class="col-md-3">
                                             <br />
-                                            <button class="btn btn-success buttonWidthModal" id="btnPal">Check</button>
+                                            <br />
+                                            <button type="button" class="btn btn-success buttonWidthModal" id="btnStartMachine">Start</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <br />
+                                            <br />
+                                            <button type="button" class="btn btn-success buttonWidthModal" id="btnStopMachine">Stop</button>
+                                        </div>
+                                        <div class="col-md-3">
                                         </div>
                                     </div>
                                 </div>
@@ -709,13 +740,12 @@ $("#btnPal").click(function () {
                                     </div>
                                     <div class="col-md-3">
                                         <br />
-                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse5" aria-expanded="false" aria-controls="multiCollapse5 multiCollapseCode5" id="btnShow5">Show Code</button>
+                                        <button type="button" class="btn btn-info buttonWidthModal" data-toggle="collapse" data-target=".multi-collapse5" aria-expanded="false" aria-controls="multiCollapse4 multiCollapseCode5" id="btnShow5">Show Code</button>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <br />
                                     <div class="collapse multi-collapse5 scriptborder" id="multiCollapseCode5">
-
                                     </div>
                                 </div>
                             </div>

@@ -523,6 +523,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\bootstrap.png" />
+    <Content Include="images\cherry.png" />
     <Content Include="images\cplus.png" />
     <Content Include="images\csharp.png" />
     <Content Include="images\divider.png" />
@@ -531,6 +532,7 @@
     <Content Include="images\main-banner.jpg" />
     <Content Include="images\map-bottom.png" />
     <Content Include="images\mvc.png" />
+    <Content Include="images\Port.jpg" />
     <Content Include="images\projects\black.png" />
     <Content Include="images\projects\blog.jpg" />
     <Content Include="images\projects\car.jpg" />
@@ -557,6 +559,7 @@
     <Content Include="css\icons\fonts\linecons.eot" />
     <Content Include="css\icons\fonts\linecons.ttf" />
     <Content Include="css\icons\fonts\linecons.woff" />
+    <Content Include="Content\whg.swf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\CustomScripts.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
