@@ -934,3 +934,73 @@ p.lead{
     width: 300px;
     overflow-x: auto;
 }
+
+@media (max-width: 414px){
+    .labelOverflow {
+        width: 250px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 250px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 411px) {
+    .labelOverflow {
+        width: 200px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 200px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .labelOverflow {
+        width: 175px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 175px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .labelOverflow {
+        width: 150px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 150px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .labelOverflow {
+        width: 125px;
+        overflow-x: auto;
+    }
+
+    .scrollbar {
+        height: 100px;
+        width: 125px;
+        overflow-y: scroll;
+        display: none;
+    }
+}
