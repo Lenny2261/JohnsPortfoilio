@@ -1,6 +1,8 @@
-﻿@{
+﻿@model MyPortfolio.Models.ContactModel
+@{
     ViewBag.Title = "Home Page";
 }
+
 
 <link href="~/skins/eden.css" rel="stylesheet">
 <link href="~/css/animate.min.css" rel="stylesheet">
@@ -37,12 +39,12 @@
                         Reliable
                     </div>
                 </div>
-                        <div class="down-triangle animated fadeInDown">
-                            <div class="info">
-                                Great Programs<br />
-                                <i class="icon icon-code"></i>
-                            </div>
-                        </div>
+                <div class="down-triangle animated fadeInDown">
+                    <div class="info">
+                        Great Programs<br />
+                        <i class="icon icon-code"></i>
+                    </div>
+                </div>
                 <div class="down-triangle animated fadeInDown visible-sm">
                     <div class="info">
                         Great Programs<br />
@@ -57,7 +59,7 @@
                 </div>
                 <div class="down-triangle animated fadeInDown">
                     <div class="info">
-                       Problem Solver<br />
+                        Problem Solver<br />
                         <i class="icon icon-laptop"></i>
                     </div>
                 </div>
@@ -166,9 +168,9 @@
                     The skills listed above are some of the several skills I know.<br />
                     I have several projects that showcase these skills you can see them furthur down. <br />
                     I have always loved electronics and technology and I feel it shows in my work with programs.<br />
-                    I have also in interned at CoreTechs developing VR applications for companies.<br />
-                    I have a lot of knowledge of C#. I also have knowledge of other coding languages such as <br/>
-                    C++, Java, SQL, VB.net, and Javascript. I also know how to work with Unity, Xamarin, and Bootstrap <br/>
+                    I have also interned at a company called CoreTechs developing VR applications for other companies.<br />
+                    I have a lot of knowledge of C#. I also have knowledge of other coding languages such as <br />
+                    C++, Java, SQL, VB.net, and Javascript. I also know how to work with Unity, Xamarin, and Bootstrap <br />
                     using MVC.
                 </p>
             </div>
@@ -238,7 +240,7 @@
 </section>
 
 
-<div id="resume"><br/></div>
+<div id="resume"><br /></div>
 
 <section class="gray">
     <div class="container">
@@ -264,27 +266,26 @@
                     <strong>Error!</strong> There was an error sending your message.
                 </div>
                 <h2 class="short"><strong>Contact</strong> Me!</h2>
-                <form class="clearfix" accept-charset="utf-8" method="get" action="#">
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) { 
                     <div class="row">
                         <div class="col-sm-6 form-group">
-                            <label for="name">Name</label>
-                            <input type="text" placeholder="" value="" name="name" id="name"
-                                   class="form-control input-lg">
+                            @Html.LabelFor(m => m.name, new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.name, new { @class = "form-control input-lg" })
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" placeholder="" value="" name="email" id="email"
-                                   class="form-control input-lg">
+                            @Html.LabelFor(m => m.email, new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.email, new { @class = "form-control input-lg" })
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label for="message">Message</label>
-                            <textarea rows="4" name="message" id="message" class="form-control"></textarea>
-                        </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        @Html.LabelFor(m => m.message, new { @class = "control-label" })
+                        <br />
+                        @Html.TextAreaFor(m => m.message, new { @class = "form-controls", @rows = "6", @cols = "40" })
                     </div>
-                    <button class="btn btn-success btn-xlg" type="submit">Send Message</button>
-                </form>
+                </div>
+                <button class="btn btn-success btn-xlg" type="submit">Send Message</button>
+                }
             </div>
         </div>
     </div>
@@ -723,7 +724,7 @@ $("#btnPal").click(function () {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <br/>
+                                            <br />
                                             <label id="winningMessage"></label>
                                         </div>
                                         <div class="col-md-3">
@@ -867,4 +868,3 @@ $("#btnStartMachine").click(function () {
     @Scripts.Render("https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     @Scripts.Render("~/Scripts/CustomScripts.js")
 }
-
