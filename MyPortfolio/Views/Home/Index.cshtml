@@ -79,7 +79,7 @@
             <div class="col-md-12 text-center">
                 <h2>Skills</h2>
                 <p>
-                    These are all of the tools and skills I have learned.<br />
+                    These are all of the tools and skills I have learned. As well as the coding languages I know.<br />
                 </p>
             </div>
         </div>
@@ -158,14 +158,18 @@
         </div>
         <div class="row inner-page">
             <div class="col-md-4">
-                <img class="img-rounded" src="~/images/port.jpg" alt="John Mahoney" />
+                <img class="img-rounded portImg" src="~/images/port.jpg" alt="John Mahoney" />
             </div>
             <div class="col-md-8">
                 <p class="text-left">
                     My name is John Mahoney. I have an associate's degree from Forsyth tech. <br />
                     The skills listed above are some of the several skills I know.<br />
                     I have several projects that showcase these skills you can see them furthur down. <br />
-                    I have always loved electronics and technology and I feel it shows in my work with programs.
+                    I have always loved electronics and technology and I feel it shows in my work with programs.<br />
+                    I have also in interned at CoreTechs developing VR applications for companies.<br />
+                    I have a lot of knowledge of C#. I also have knowledge of other coding languages such as <br/>
+                    C++, Java, SQL, VB.net, and Javascript. I also know how to work with Unity, Xamarin, and Bootstrap <br/>
+                    using MVC.
                 </p>
             </div>
 
@@ -180,7 +184,7 @@
                 <br />
                 <h2>My Projects</h2>
                 <p>
-                    These are my projects that I have been working on, while learning at Coder Foundry.
+                    These are my projects that I have been working on.
                 </p>
             </div>
         </div>
@@ -292,11 +296,11 @@
             <div class="modal-header">
                 <div class="modal-body" style="background-color: white; color: black;">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#js1" class="tab-changed" id="tab1">Exercise 1</a></li>
-                        <li><a data-toggle="tab" href="#js2" class="tab-changed" id="tab2">Exercise 2</a></li>
-                        <li><a data-toggle="tab" href="#js3" class="tab-changed" id="tab3">Exercise 3</a></li>
-                        <li><a data-toggle="tab" href="#js4" class="tab-changed" id="tab4">Exercise 4</a></li>
-                        <li><a data-toggle="tab" href="#js5" class="tab-changed" id="tab5">Custom Exercise 1</a></li>
+                        <li class="active"><a data-toggle="tab" href="#js1" class="tab-changed" id="tab1">Math Fun</a></li>
+                        <li><a data-toggle="tab" href="#js2" class="tab-changed" id="tab2">Factorial That</a></li>
+                        <li><a data-toggle="tab" href="#js3" class="tab-changed" id="tab3">CRAZY FIZZBUZZ</a></li>
+                        <li><a data-toggle="tab" href="#js4" class="tab-changed" id="tab4">emordnilaP</a></li>
+                        <li><a data-toggle="tab" href="#js5" class="tab-changed" id="tab5">Test Your Luck</a></li>
                     </ul>
                     <button type="button" class="close" data-dismiss="modal" id="modalClose">&times;</button>
                     <div class="tab-content">
@@ -552,20 +556,20 @@ $("#btnFizzBuzz").click(function () {
 
             //if both are fizzbuzz
             if (fizz === 0 && buzz === 0) {
-                fizzBuzz = fizzBuzz + " " + "<span class='fizzBuzz'>FizzBuzz,</span>"
+                fizzBuzz = fizzBuzz + " " + "<'span class='fizzBuzz'>FizzBuzz,<'/span>"
             }
             else {
                 if (fizz === 0) {
                     //if first fizz
-                    fizzBuzz = fizzBuzz + " " + "<span class='fizz'>Fizz,</span>"
+                    fizzBuzz = fizzBuzz + " " + "<'span class='fizz'>Fizz,<'/span>"
                 }
                 else if (buzz === 0) {
                     //if second buzz
-                    fizzBuzz = fizzBuzz + " " + "<span class='buzz'>Buzz,</span>"
+                    fizzBuzz = fizzBuzz + " " + "<'span class='buzz'>Buzz,<'/span>"
                 }
                 else {
                     //if none display the number
-                    fizzBuzz = fizzBuzz + " " + "<b>" + index + "</b>" + ","
+                    fizzBuzz = fizzBuzz + " " + "<'b>" + index + "<'/b>" + ","
                 }
             }
         }
@@ -742,19 +746,23 @@ $("#btnPal").click(function () {
                                     <div class="collapse multi-collapse5 scriptborder" id="multiCollapseCode5">
                                         <pre class="prettyprint linenums">
 $("#btnStartMachine").click(function () {
-    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/apple.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
+    //Declare vars and get input
+    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/grapes.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
     var account = $("#bankAccount").text();
     var betting = Number($("#bettingAmount").val());
     account = Number(account.substring(1, account.length));
-    if ($("#bettingAmount").val() != "" && account > 0) {
+    if ($("#bettingAmount").val() != "" && account > 0 && betting <= account) {
+        //Declare random vars
         var pic1 = Math.floor(Math.random() * 8)
         var pic2 = Math.floor(Math.random() * 8)
         var pic3 = Math.floor(Math.random() * 8)
 
+        //Change image
         document.getElementById("slotImage1").src = machineArr[pic1];
         document.getElementById("slotImage2").src = machineArr[pic2];
         document.getElementById("slotImage3").src = machineArr[pic3];
 
+        //Testing for winners
         if (pic1 == 0 && pic2 == 0 && pic3 == 0 || pic1 == 1 && pic2 == 1 && pic3 == 1) {
             $("#winningMessage").text("YOU HAVE WON! Your earnings is 1.5x what you have bet");
             betting = betting * 1.5;
@@ -790,14 +798,19 @@ $("#btnStartMachine").click(function () {
             account = account - betting;
         }
 
+        //Display text
         $("#bankAccount").text("$" + account);
     }
     else {
+        //Messages for losing
         if (account <= 0) {
             $("#winningMessage").text("Come back when you get some money buddy. (leave then come back)");
         }
+        else if (betting > account) {
+            $("#winningMessage").text("You cannot bet more then you have");
+        }
         else {
-            $("#winningMessage").text("Enter a betting amount");
+            $("#winningMessage").text("Enter a betting amount and as numeric");
         }
     }
 })

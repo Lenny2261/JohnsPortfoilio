@@ -814,11 +814,6 @@ p.lead{
 
 }
 
-.up-triangle:hover .icon,
-.down-triangle:hover .icon {
-    color: rgb(247, 140, 34);
-}
-
 .portfolio-block{
     position: relative;
     margin-bottom: 30px;

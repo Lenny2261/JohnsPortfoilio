@@ -525,19 +525,23 @@ $("#btnCrazyMode").click(function () {
 });
 
 $("#btnStartMachine").click(function () {
-    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/apple.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
+    //Declare vars and get input
+    var machineArr = ["/images/apple.png", "/images/cherry.png", "/images/grapes.png", "/images/diamond.png", "/images/orange.png", "/images/bar.png", "/images/Lucky7.png", "/images/lemon.png"]
     var account = $("#bankAccount").text();
     var betting = Number($("#bettingAmount").val());
     account = Number(account.substring(1, account.length));
-    if ($("#bettingAmount").val() != "" && account > 0) {
+    if ($("#bettingAmount").val() != "" && account > 0 && betting <= account) {
+        //Declare random vars
         var pic1 = Math.floor(Math.random() * 8)
         var pic2 = Math.floor(Math.random() * 8)
         var pic3 = Math.floor(Math.random() * 8)
 
+        //Change image
         document.getElementById("slotImage1").src = machineArr[pic1];
         document.getElementById("slotImage2").src = machineArr[pic2];
         document.getElementById("slotImage3").src = machineArr[pic3];
 
+        //Testing for winners
         if (pic1 == 0 && pic2 == 0 && pic3 == 0 || pic1 == 1 && pic2 == 1 && pic3 == 1) {
             $("#winningMessage").text("YOU HAVE WON! Your earnings is 1.5x what you have bet");
             betting = betting * 1.5;
@@ -573,14 +577,19 @@ $("#btnStartMachine").click(function () {
             account = account - betting;
         }
 
+        //Display text
         $("#bankAccount").text("$" + account);
     }
     else {
+        //Messages for losing
         if (account <= 0) {
             $("#winningMessage").text("Come back when you get some money buddy. (leave then come back)");
         }
+        else if (betting > account) {
+            $("#winningMessage").text("You cannot bet more then you have");
+        }
         else {
-            $("#winningMessage").text("Enter a betting amount");
+            $("#winningMessage").text("Enter a betting amount and as numeric");
         }
     }
 })
