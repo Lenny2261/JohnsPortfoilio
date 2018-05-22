@@ -568,6 +568,7 @@
     <Content Include="css\icons\fonts\linecons.ttf" />
     <Content Include="css\icons\fonts\linecons.woff" />
     <Content Include="Content\whg.swf" />
+    <Content Include="private.config" />
     <None Include="Properties\PublishProfiles\jmport - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\CustomScripts.js" />

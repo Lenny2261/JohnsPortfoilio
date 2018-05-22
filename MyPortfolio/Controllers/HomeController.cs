@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
 using MyPortfolio.Models;
+using System.Web.Configuration;
 
 namespace MyPortfolio.Controllers
 {
@@ -23,18 +24,20 @@ namespace MyPortfolio.Controllers
             {
                 try
                 {
+                    var emailFrom = WebConfigurationManager.AppSettings["username"];
+
                     MailMessage mM = new MailMessage();
-                    mM.From = new MailAddress("juan226611@yahoo.com");
-                    mM.To.Add("juan226611@yahoo.com");
-                    mM.Subject = model.name + " has sent you an email";
-                    mM.Body = model.message + " test " + model.email;
+                    mM.From = new MailAddress(emailFrom);
+                    mM.To.Add(WebConfigurationManager.AppSettings["emailto"]);
+                    mM.Subject = model.name + " has sent you an email from your portfolio";
+                    mM.Body = model.message + " /nEmail: " + model.email;
                     mM.IsBodyHtml = true;
 
                     SmtpClient SmtpServer = new SmtpClient();
 
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("juan226611@yahoo.com", "penguins82");
-                    SmtpServer.Port = 587;
-                    SmtpServer.Host = "smtp.mail.yahoo.com";
+                    SmtpServer.Credentials = new System.Net.NetworkCredential(WebConfigurationManager.AppSettings["username"], WebConfigurationManager.AppSettings["password"]);
+                    SmtpServer.Port = int.Parse(WebConfigurationManager.AppSettings["port"]);
+                    SmtpServer.Host = WebConfigurationManager.AppSettings["host"];
                     SmtpServer.EnableSsl = true;
                     SmtpServer.Send(mM);
                 }
