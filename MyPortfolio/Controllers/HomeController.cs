@@ -17,9 +17,9 @@ namespace MyPortfolio.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Contact(ContactModel model)
         {
-
             if (ModelState.IsValid)
             {
                 try
