@@ -875,4 +875,24 @@ $("#btnStartMachine").click(function () {
 @section scripts{
     @Scripts.Render("https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     @Scripts.Render("~/Scripts/CustomScripts.js")
+
+    <script>
+        var check = '@TempData["contactCheck"]';
+        if (check == "Success") {
+            window.onload = function () {
+                swal(
+                    'Thank You!',
+                    "Your Email has been sent I'll respond as soon as I am able to!",
+                    'success'
+                )
+            }
+        }
+        else if (check == "Failure") {
+            swal({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong! Your email has not Sent scroll down to see why!',
+            })
+        }
+    </script>
 }

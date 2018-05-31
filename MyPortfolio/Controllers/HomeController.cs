@@ -13,6 +13,7 @@ namespace MyPortfolio.Controllers
     {
         public ActionResult Index()
         {
+            TempData["contactCheck"] = "";
             return View();
         }
 
@@ -20,6 +21,7 @@ namespace MyPortfolio.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(ContactModel model)
         {
+
             if (ModelState.IsValid)
             {
                 try
@@ -41,22 +43,21 @@ namespace MyPortfolio.Controllers
                     SmtpServer.EnableSsl = true;
                     SmtpServer.Send(mM);
 
-                    return View("Thanks");
+                    TempData["contactCheck"] = "Success";
+
+                    return View("Index");
                 }
                 catch (Exception ex)
                 {
+                    TempData["contactCheck"] = "Failure";
                     return View("Index");
                 }
             }
             else
             {
+                TempData["contactCheck"] = "Failure";
                 return View("Index", model);
             }
-        }
-
-        public ActionResult Thanks()
-        {
-            return View();
         }
     }
 }
