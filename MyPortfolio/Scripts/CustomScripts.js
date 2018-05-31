@@ -593,3 +593,9 @@ $("#btnStartMachine").click(function () {
         }
     }
 })
+
+$(window).on("load", function () {
+    if ($("#contact1").val() != "" || $("#contact2").val() != "" || $("#contact3").val() != "") {
+        window.location.href = window.location.href + "#resume"
+    }
+})

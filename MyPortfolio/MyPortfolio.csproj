@@ -568,7 +568,7 @@
     <Content Include="css\icons\fonts\linecons.ttf" />
     <Content Include="css\icons\fonts\linecons.woff" />
     <Content Include="Content\whg.swf" />
-    <Content Include="private.config" />
+    <Content Include="Private.config" />
     <None Include="Properties\PublishProfiles\jmport - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\CustomScripts.js" />
@@ -597,6 +597,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

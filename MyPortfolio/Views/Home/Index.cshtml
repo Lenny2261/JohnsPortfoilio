@@ -199,8 +199,8 @@
                 <div class="portfolio-block">
                     <img src="~/images/projects/blog.jpg" alt="Protect" />
                     <div class="portfolio-caption text-center animated">
-                        <h3 class="animated">Blog (Coming Soon)</h3>
-                        <a href="#" class="btn btn-social btn-stack-overflow btn-sm animated"><i class="tn-arrow-right"></i></a>
+                        <h3 class="animated">Blog</h3>
+                        <a href="https://jmblogspot.azurewebsites.net/" target="_blank" class="btn btn-social btn-stack-overflow btn-sm animated"><i class="tn-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -266,31 +266,33 @@
                     <strong>Error!</strong> There was an error sending your message.
                 </div>
                 <h2 class="short"><strong>Contact</strong> Me!</h2>
-                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                 {
                     @Html.AntiForgeryToken()
-                <div class="row">
-                    @Html.ValidationSummary("", new { @class = "text-danger" })
-                    <div class="col-sm-6 form-group">
-                        @Html.LabelFor(m => m.name, new { @class = "control-label" })
-                        @Html.TextBoxFor(m => m.name, new { @class = "form-control input-lg" })
-                        @Html.ValidationMessageFor(m => m.name)
+                    <div class="row">
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div class="col-sm-12 form-group">
+                            @Html.LabelFor(m => m.name, new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.name, new { @class = "form-control input-lg", id = "contact1" })
+                            @Html.ValidationMessageFor(m => m.name)
+                        </div>
                     </div>
-                    <div class="col-sm-6 form-group">
-                        @Html.LabelFor(m => m.email, new { @class = "control-label" })
-                        @Html.TextBoxFor(m => m.email, new { @class = "form-control input-lg" })
-                        @Html.ValidationMessageFor(m => m.email)
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            @Html.LabelFor(m => m.email, new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.email, new { @class = "form-control input-lg", id = "contact2" })
+                            @Html.ValidationMessageFor(m => m.email)
+                        </div>
                     </div>
-                </div>
                     <div class="row">
                         <div class="col-sm-12 form-group">
                             @Html.LabelFor(m => m.message, new { @class = "control-label" })
                             <br />
-                            @Html.TextAreaFor(m => m.message, new { @class = "form-controls", @rows = "6", @cols = "40" })
+                            @Html.TextAreaFor(m => m.message, new { @class = "form-control", @rows = "6", @cols = "40", id = "contact3" })
                             @Html.ValidationMessageFor(m => m.message)
                         </div>
                     </div>
-                    <button class="btn btn-success btn-xlg" type="submit">Send Message</button>
+                    <button id="btnContact" class="btn btn-success btn-xlg" type="submit">Send Message</button>
                 }
             </div>
         </div>

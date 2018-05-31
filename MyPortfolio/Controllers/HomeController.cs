@@ -18,7 +18,7 @@ namespace MyPortfolio.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Contact(ContactModel model)
+        public ActionResult Index(ContactModel model)
         {
             if (ModelState.IsValid)
             {
@@ -30,7 +30,7 @@ namespace MyPortfolio.Controllers
                     mM.From = new MailAddress(emailFrom);
                     mM.To.Add(WebConfigurationManager.AppSettings["emailto"]);
                     mM.Subject = model.name + " has sent you an email from your portfolio";
-                    mM.Body = model.message + " /nEmail: " + model.email;
+                    mM.Body = model.message + " Email: " + model.email;
                     mM.IsBodyHtml = true;
 
                     SmtpClient SmtpServer = new SmtpClient();
@@ -40,14 +40,23 @@ namespace MyPortfolio.Controllers
                     SmtpServer.Host = WebConfigurationManager.AppSettings["host"];
                     SmtpServer.EnableSsl = true;
                     SmtpServer.Send(mM);
+
+                    return View("Thanks");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("This shouldn't happen");
+                    return View("Index");
                 }
             }
+            else
+            {
+                return View("Index", model);
+            }
+        }
 
-            return View("Index", model);
+        public ActionResult Thanks()
+        {
+            return View();
         }
     }
 }
