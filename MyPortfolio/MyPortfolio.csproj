@@ -540,6 +540,7 @@
     <Content Include="images\mvc.png" />
     <Content Include="images\orange.png" />
     <Content Include="images\Port.jpg" />
+    <Content Include="images\Port2.jpg" />
     <Content Include="images\bar.png" />
     <Content Include="images\projects\black.png" />
     <Content Include="images\projects\blog.jpg" />
@@ -569,6 +570,8 @@
     <Content Include="css\icons\fonts\linecons.woff" />
     <Content Include="Content\whg.swf" />
     <Content Include="Private.config" />
+    <Content Include="Documents\Resume.docx" />
+    <Content Include="Documents\Resume.pdf" />
     <None Include="Properties\PublishProfiles\jmport - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\CustomScripts.js" />
